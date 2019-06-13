@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="telcomApp">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>电信网络攻击分析</title>
+		<meta name="description" content="">
+		<meta name="author" content="hehe">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="./css/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="./css/bootstrap/css/bootstrap-theme.min.css" />
+		<link rel="stylesheet" href="./css/bootstrap/css/bootstrap-table.css">
+		<link rel="stylesheet" href="./css/directives/select.css" />
+		<link rel="stylesheet" href="./css/directives/selectize.default.css" />
+
+
+		<script type="text/javascript" src="./lib/base/jquery.min.js"></script>
+
+		<script type="text/javascript" src="./lib/angular/angular.min.js"></script>
+		<script type="text/javascript" src="./lib/angular/angular-route.min.js"></script>
+		<script type="text/javascript" src="./lib/angular/angular-sanitize.min.js"></script>
+
+		<script type="text/javascript" src="./lib/charts/echarts.min.js"></script>
+		<script type="text/javascript" src="./lib/charts/china.js"></script>
+
+		<script type="text/javascript" src="./lib/directives/ui-bootstrap.min.js"></script>
+		<script type="text/javascript" src="./lib/directives/select.js"></script>
+		<script type="text/javascript" src="./js/app.js"></script>
+		<script type="text/javascript" src="./js/httpUtils.js"></script>
+		<script type="text/javascript" src="./js/interceptor.js"></script>
+		<script type="text/javascript" src="./js/commonUtils.js"></script>
+
+
+
+		<script type="text/javascript" src="./lib/base/bootstrap.min.js"></script>
+		<script type="text/javascript" src="./css/bootstrap/js/bootstrap-table.js"></script>
+		<script type="text/javascript" src="./css/bootstrap/js/bootstrap-table-zh-CN.js"></script>
+
+		<script type="text/javascript" src="./apps/telcom/content.js"></script>
+		<script type="text/javascript" language="javascript" src="./apps/telcom/demo.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="./apps/telcom/hehe.js"></script>
+	</head>
+	<body >
+		<div>
+			<h2>AngularJS 路由应用</h2>
+			<ul class="nav nav-pills">
+				<li class="active"><a href="#/">首页</a></li>
+
+				<li><a href="#/demo">angular test</a></li>
+				<li><a href="#/content">飞行图</a></li>
+				<li><a href="#/printers">打印机</a></li>
+				<li><a href="#/hehe">hehe</a></li>
+			</ul>
+
+			<section id="page">
+				<div ng-view></div>
+
+			</section>
+		</div>
+	<!--<script>-->
+		<!--var arr = $(".nav-pills>li");-->
+		<!--for (var a in arr){-->
+			<!--$(a).click(function () {-->
+				<!--alert(8)-->
+            <!--})-->
+		<!--}-->
+
+	<!--</script>-->
+	<!--<shen-directive></shen-directive>-->
+	</body>
+</html>
+<style>
+	#page{
+		background: -webkit-linear-gradient(#7FFFD4, blue); /* Safari 5.1 - 6.0 */
+		background: -o-linear-gradient(#7FFFD4, blue); /* Opera 11.1 - 12.0 */
+		background: -moz-linear-gradient(#7FFFD4, blue); /* Firefox 3.6 - 15 */
+		background: linear-gradient(#00008B,#09182D); /* 标准的语法（必须放在最后） */
+	}
+
+
+
+</style>

@@ -1,0 +1,90 @@
+<style type="text/css">
+	.active{
+		background: #ffc42b;
+	}
+	.div-inline{
+		float: left;
+		background: yellow;
+		width: 30px;
+		height: auto;
+		min-height: 70px;
+	}
+</style>
+<div ng-init="init()" >
+
+	<div class="row">
+		<div class="col-md-3" style="padding-left:0px;">
+            <p class="input-group">
+                <input type="text" class="form-control" uib-datepicker-popup="{{dateOptions.dateFormat}}" ng-model="param.date" is-open="datePopup.opened" datepicker-options="dateOptions" ng-required="true" close-text="关闭" current-text="今天" clear-text="清除"/>
+                <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="openDatePopup()"><i class="glyphicon glyphicon-calendar"></i></button>
+            </span>
+            </p>
+        </div>
+	</div>
+	<div class="row">
+		<div class="col-md-2" style="color: white">
+			Logo is here !
+		</div>
+		<div class="col-md-2" style="color: white">
+			今日攻击总数
+			<div>历史最高10999999999</div>
+			<div>1233455</div>
+
+		</div>
+		<div class="col-md-4">
+			<div id="p1" style="height:auto;min-height:200px;width:100%;"></div>
+		</div>
+		<div class="col-md-3">
+			<div id="p2" style="height:auto;min-height:200px;width:100%;"></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-2" style="color: white">
+			<div style="background: rgb(23,0,4)">
+				<div style="background: rgb(41,2,8);height: 30px">攻击者IP TOP5</div>
+				<div id="p3" style="height:auto;min-height:200px;width:100%;"></div>
+			</div>
+			<div style="background: rgb(5,12,30)">
+				<div style="background: rgb(9,19,46);height: 30px">被攻击者IP TOP10</div>
+				<div id="p4" style="height:auto;min-height:250px;width:100%;"></div>
+			</div>
+		</div>
+		<div class="col-md-8">
+			<div class="btn-group" style="">
+				<button class="btn" ng-click="p6show=false;state=1" ng-class="{active:state==1}">路线图</button>
+				<button class="btn" ng-click="p6show=true;state=2" ng-class="{active:state==2}" >热力图</button>
+			</div>
+			<div id="p5" style="height:auto;min-height:450px;width:100%;" ng-show="!p6show"></div>
+			<div id="p6" style="height:auto;min-height:450px;width:100%;" ng-show="p6show"></div>
+			<div class="col-md-2" style="background: black;height:auto;min-height:150px;margin-top: -150px;">
+				<div id="p7" style="height:auto;min-height:150px;width:100%;"></div>
+			</div>
+			<div class="col-md-10" style="background: black;height:auto;min-height:75px;margin-top: -75px;float: right;">
+				<div id="p8" style="height:auto;min-height:75px;width:100%;float: right"></div>
+			</div>
+		</div>
+
+		<div class="col-md-2" style="margin-left: -30px;color: white">
+			<div  style="background: rgb(23,0,4)">
+				<div style="background: rgb(62,0,12)">最新攻击者列表</div>
+				<p class="text-left">123</p>
+				<p class="text-left">456</p>
+				<p class="text-left">789</p>
+				<p class="text-left">abc</p>
+			</div>
+			<div  style="background: rgb(5,13,33)">
+				<div style="background: rgb(8,18,45)">业界热点新闻</div>
+					<p class="text-left">123</p>
+					<p class="text-left">456</p>
+					<p class="text-left">789</p>
+					<p class="text-left">abc</p>
+
+			</div>
+			<div  style="background: rgb(5,12,29)">
+				<div style="background: rgb(5,17,46)">违规网站统计</div>
+				<div id="p20" style="height:auto;min-height:150px;width:100%;"></div>
+			</div>
+		</div>
+	</div>
+</div>

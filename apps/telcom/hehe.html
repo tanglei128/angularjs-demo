@@ -1,0 +1,130 @@
+<div ng-controller="heheController" ng-init="init()">
+
+
+
+
+
+
+
+    <h2>{{mydate}}</h2>
+    {{name}}
+
+
+                         <p ng-bind="createPromOrder.totalAmount ? (createPromOrder.totalAmount*0.01 | number:2):'--'">
+                        </p>
+                        <button ng-click=keke()>999999</button>
+
+
+                        <div ng-show="tips">
+                            <p>{{tipsInfo}}</p>
+                        </div>
+    <div>
+        <ul ng-repeat="x in names  track by $index">
+            <li ng-click="gotest($event,x,$index)">{{x.name}}+","+{{x.country}}<a>8888888</a></li>
+
+            <div ng-if = "true">
+                <input type="text" ng-model="myname[$index].name">
+                <input type="button" ng-click="changeName($index)">
+
+            </div>
+            <div ng-if = "false">
+                <input type="text" ng-model="myname">
+                <input type="button" ng-click="changeName($index)">
+
+            </div>
+
+        </ul>
+            <h>{{fee/100}}</h>
+
+        <div class="dia-cover" ng-show="invoiceFailed" ng-hide="flag">
+            <div class="dia-box">
+                <div class="dia-inner">
+                    <div class="dia-tit">提示
+                        <span class="icon icon-dia-close"  onclick="closeDiv(this)"></span>
+                    </div>
+                    <div class="dia-content">
+                        <!-- <div ><i class="icon-dia-stop"></i></div> -->
+
+
+                        <!--<p class="text-defaultOne" ng-show="showOne">数据查询失败</p>-->
+                        <!--<p class="text-defaultTwo" ng-show="showTwo">发票申请处理中</p>-->
+                        <!--<p class="text-defaultThree" ng-show="showThree">无法在线申请客户增值税专票</p>-->
+                        <!--<p class="text-defaultFour" ng-show="showFour">暂无发票信息</p>-->
+
+                        <p class="text-defaultOne">{{invoiceFailText}}</p>
+
+                    </div>
+                    <div class="dia-footer">
+                        <a class="btn" onclick="closeDiv(this)">我知道了</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mask-loading" class="mask-loading" style="background-color: rgba(0, 0, 0, 0.17);">
+        <div class="loading-panel">Loading...
+            <div class="loading-icon"></div>
+        </div>
+    </div>
+
+
+
+</div>
+
+<style>
+    .sss{
+    position:fixed;
+    height:51px;text-align:center;
+    z-index:9999;top:45%;
+    left:45%;
+    line-height:2.3;
+    }
+    .mask-loading .loading-icon {
+        -webkit-animation: rotate 1s linear infinite;
+        -o-animation: rotate 1s linear infinite;
+        animation: rotate 1s linear infinite;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 40px;
+        height: 40px;
+        margin: -20px 0 0 -20px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #37c3aa #37c3aa #fff #fff;
+        opacity: .7;
+        border-radius: 40px;
+    }
+    .loading-panel{
+        font-size: 16px;
+        color: white;
+        top: 50%;
+        position: absolute;
+        left: 50%;
+        padding-bottom: 60px;
+    }
+
+    .mask-loading {
+        display:block;
+        position:fixed;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        background:0 0;
+        z-index:9999;
+    }
+
+    @-webkit-keyframes rotate{
+        0% {-webkit-transform:rotate(0)}
+        100% {-webkit-transform:rotate(360deg)}
+    }
+
+    @keyframes rotate{
+        0% {transform:rotate(0)}
+        100% {transform:rotate(360deg)}
+    }
+
+
+</style>
